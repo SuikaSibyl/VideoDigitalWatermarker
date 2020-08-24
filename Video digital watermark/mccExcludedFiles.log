@@ -1,0 +1,3 @@
+The List of Excluded Files
+Excluded files	 Exclusion Message ID	 Reason For Exclusion	 Exclusion Rule
+E:/Matlab/toolbox/vision/vision/mplay.m	MATLAB:depfun:req:ExcludedBy	根据 "Compiler" 许可证，对于 "MCR" 目标环境，打包时不会包含文件或函数。请从代码中删除文件或函数，或者使用 MATLAB 函数 "isdeployed" 确保函数不会在所部署的组件中被调用。	

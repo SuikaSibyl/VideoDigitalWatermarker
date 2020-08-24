@@ -1,0 +1,186 @@
+<deployment-project plugin="plugin.ezdeploy" plugin-version="1.0">
+  <configuration build-checksum="2820973080" file="G:\SuikaSibyl\课程\MSP媒体信号处理\Project\window.prj" location="G:\SuikaSibyl\课程\MSP媒体信号处理\Project" name="window" preferred-package-location="G:\SuikaSibyl\课程\MSP媒体信号处理\Project\window\for_redistribution" preferred-package-type="package.type.exe" target="target.ezdeploy.standalone" target-name="Application Compiler">
+    <param.appname>window</param.appname>
+    <param.icon />
+    <param.icons />
+    <param.version>1.0</param.version>
+    <param.authnamewatermark>Haley Lu</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.guid />
+    <param.installpath.string>\window\</param.installpath.string>
+    <param.installpath.combo>option.installpath.programfiles</param.installpath.combo>
+    <param.logo />
+    <param.install.notes />
+    <param.target.install.notes />
+    <param.intermediate>${PROJECT_ROOT}\window\for_testing</param.intermediate>
+    <param.files.only>${PROJECT_ROOT}\window\for_redistribution_files_only</param.files.only>
+    <param.output>${PROJECT_ROOT}\window\for_redistribution</param.output>
+    <param.logdir>${PROJECT_ROOT}\window</param.logdir>
+    <param.enable.clean.build>false</param.enable.clean.build>
+    <param.user.defined.mcr.options />
+    <param.target.type>subtarget.standalone</param.target.type>
+    <param.support.packages />
+    <param.web.mcr>true</param.web.mcr>
+    <param.package.mcr>false</param.package.mcr>
+    <param.no.mcr>false</param.no.mcr>
+    <param.web.mcr.name>MyAppInstaller_web</param.web.mcr.name>
+    <param.package.mcr.name>MyAppInstaller_mcr</param.package.mcr.name>
+    <param.no.mcr.name>MyAppInstaller_app</param.no.mcr.name>
+    <param.windows.command.prompt>true</param.windows.command.prompt>
+    <param.create.log>false</param.create.log>
+    <param.log.file />
+    <param.native.matlab>false</param.native.matlab>
+    <param.checkbox>false</param.checkbox>
+    <param.example />
+    <param.help.text />
+    <unset>
+      <param.icon />
+      <param.icons />
+      <param.version />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.guid />
+      <param.installpath.string />
+      <param.installpath.combo />
+      <param.logo />
+      <param.install.notes />
+      <param.target.install.notes />
+      <param.intermediate />
+      <param.files.only />
+      <param.output />
+      <param.logdir />
+      <param.enable.clean.build />
+      <param.user.defined.mcr.options />
+      <param.target.type />
+      <param.support.packages />
+      <param.web.mcr />
+      <param.package.mcr />
+      <param.no.mcr />
+      <param.web.mcr.name />
+      <param.package.mcr.name />
+      <param.no.mcr.name />
+      <param.windows.command.prompt />
+      <param.create.log />
+      <param.log.file />
+      <param.native.matlab />
+      <param.checkbox />
+      <param.example />
+      <param.help.text />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\window.m</file>
+    </fileset.main>
+    <fileset.resources />
+    <fileset.package />
+    <fileset.depfun>
+      <file>${PROJECT_ROOT}\compr.mat</file>
+      <file>${PROJECT_ROOT}\crap.m</file>
+      <file>${PROJECT_ROOT}\Crap.mat</file>
+      <file>${PROJECT_ROOT}\dct2.m</file>
+      <file>${PROJECT_ROOT}\decmacroblock.m</file>
+      <file>${PROJECT_ROOT}\decmov.mat</file>
+      <file>${PROJECT_ROOT}\decmpeg.m</file>
+      <file>${PROJECT_ROOT}\encmov.m</file>
+      <file>${PROJECT_ROOT}\ExtractWatermark.m</file>
+      <file>${PROJECT_ROOT}\Filter.m</file>
+      <file>${PROJECT_ROOT}\gaussian.m</file>
+      <file>${PROJECT_ROOT}\Gaussian.mat</file>
+      <file>${PROJECT_ROOT}\getblocks.m</file>
+      <file>${PROJECT_ROOT}\getmotionvec.m</file>
+      <file>${PROJECT_ROOT}\getmov.m</file>
+      <file>${PROJECT_ROOT}\idct2.m</file>
+      <file>${PROJECT_ROOT}\ind.mat</file>
+      <file>${PROJECT_ROOT}\index_f.mat</file>
+      <file>${PROJECT_ROOT}\kk.mp4</file>
+      <file>${PROJECT_ROOT}\loadfile.m</file>
+      <file>${PROJECT_ROOT}\main.m</file>
+      <file>${PROJECT_ROOT}\MedFilter.mat</file>
+      <file>${PROJECT_ROOT}\mov.mat</file>
+      <file>${PROJECT_ROOT}\mpeg.mat</file>
+      <file>${PROJECT_ROOT}\nc.m</file>
+      <file>${PROJECT_ROOT}\nc_test1.m</file>
+      <file>${PROJECT_ROOT}\nc_test2.m</file>
+      <file>${PROJECT_ROOT}\orimov.mat</file>
+      <file>${PROJECT_ROOT}\playlast.m</file>
+      <file>${PROJECT_ROOT}\psnr.m</file>
+      <file>${PROJECT_ROOT}\psnr_test.m</file>
+      <file>${PROJECT_ROOT}\psnr_test1.m</file>
+      <file>${PROJECT_ROOT}\putblocks.m</file>
+      <file>${PROJECT_ROOT}\Salt_and_Pepper.m</file>
+      <file>${PROJECT_ROOT}\water50.bmp</file>
+      <file>${PROJECT_ROOT}\water_mov.mat</file>
+      <file>${PROJECT_ROOT}\water_salt.mat</file>
+      <file>${PROJECT_ROOT}\Watermark.m</file>
+      <file>${PROJECT_ROOT}\window.fig</file>
+    </fileset.depfun>
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}\window\for_testing" name="readme.txt" optional="true">G:\SuikaSibyl\课程\MSP媒体信号处理\Project\window\for_testing\readme.txt</file>
+      <file location="${PROJECT_ROOT}\window\for_testing" name="splash.png" optional="false">G:\SuikaSibyl\课程\MSP媒体信号处理\Project\window\for_testing\splash.png</file>
+      <file location="${PROJECT_ROOT}\window\for_testing" name="window.exe" optional="false">G:\SuikaSibyl\课程\MSP媒体信号处理\Project\window\for_testing\window.exe</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>E:\Matlab</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="polyspacebugfinder" />
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <polyspacebugfinder>
+          <enabled>true</enabled>
+        </polyspacebugfinder>
+      </toolbox>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
