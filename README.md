@@ -36,11 +36,15 @@ l **抽象理论知识**
 
 Ø **峰值信噪比** 
 
-峰值信噪比(经常缩写为PSNR)是一个表示信号最大可能功率和影响它的表示精度的破坏性噪声功率的比值的工程术语。由于许多信号都有非常宽的动态范围，峰值信噪比常用对数分贝单位来表示。其计算方法如下： ![img](images\clip_image002.jpg)
+峰值信噪比(经常缩写为PSNR)是一个表示信号最大可能功率和影响它的表示精度的破坏性噪声功率的比值的工程术语。由于许多信号都有非常宽的动态范围，峰值信噪比常用对数分贝单位来表示。其计算方法如下：
+
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image002.jpg)
 
 Ø **归一化互相关系数** 
 
-归一化互相关系数(NC)是度量两幅图像相似度的一个参数，一般来说，NC的值越接近1，两幅图像越相似。![img](images\clip_image004.jpg)
+归一化互相关系数(NC)是度量两幅图像相似度的一个参数，一般来说，NC的值越接近1，两幅图像越相似。
+
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image004.jpg)
 
  
 
@@ -52,7 +56,7 @@ l **总流程**
 
 通过对视频中随机选取的帧做频域高频部分的改变而嵌入二进制数字水印。用psnr与nc两种手段检测其透明性。分别通过椒盐噪声、高斯噪声、中值滤波、小范围剪切、类似mpeg标准视频压缩等五种手段进行水印攻击。提取水印，并检测该算法鲁棒性。
 
-![img](images\clip_image006.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image006.jpg)
 
 l **水印嵌入**
 
@@ -66,11 +70,12 @@ l **水印嵌入**
 
  
 
-![img](images\clip_image008.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image008.jpg)
+
 
 （主干流程）
 
-![img](images\clip_image010.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image010.jpg)
 
 （数据嵌入）
 
@@ -80,11 +85,11 @@ l **水印读取**
 
 由于保存了水印置乱信息与随机选帧信息，因而从原视频与原水印中复原出嵌入水印时的随机效果。此后，dct等流程与嵌入类似，当到达4*n状态时，比较第3，4交流系数的绝对值之和，取出前2500项作为读取图像所用的目标。一次检测这2500项，其中系数3-4为正数的系数判为信息1，反之则为0，复原出置乱水印，并通过置乱信息还原出原始水印。
 
-![img](images\clip_image012.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image012.jpg)
 
 （主干流程）
 
-![img](images\clip_image014.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image014.jpg)
 
 （数据读取）
 
@@ -96,17 +101,19 @@ l **视频压缩**
 
 当输入I帧时，信号直接经过DCT按照图片压缩方式压缩。经过颜色下采样，分块，DCT变换，量化，zigzag展开。若当前编码帧是P，则需要将视频信号经过运动估计以及运动补偿，这里运动估计采用了3层的对数法搜索。保存其运动矢量信息，把矩阵作为残差值，再依据图片压缩形式处理。这里由于用于进行水印攻击，省略了熵编码输出的环节，本质上还是很好的还原了视频压缩的流程。
 
-![img](images\clip_image016.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image016.jpg)
 
 （主干流程）
 
  
 
-![img](images\clip_image018.png)（前置流程）
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image018.jpg)
+
+（前置流程）
 
  
 
-![img](images\clip_image020.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image020.jpg)
 
 （运动补偿）
 
@@ -194,19 +201,19 @@ Quiverplot：绘制运动矢量图
 
 **运行结果**
 
-![img](images\clip_image024.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image024.jpg)
 
 （嵌入水印前后视觉差异较小）
 
-![nc result1](images\clip_image026.jpg)
+![nc result1](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image026.jpg)
 
 （嵌入水印前后nc值基本接近于1，代表基本没有改变）
 
-![PSNR](images\clip_image028.jpg)
+![PSNR](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image028.jpg)
 
 （嵌入水印前后psnr值较高，代表透明性强）
 
-![img](images\clip_image030.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image030.jpg)
 
  
 
@@ -216,7 +223,7 @@ Quiverplot：绘制运动矢量图
 
  
 
-![img](images\clip_image032.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image032.jpg)
 
  
 
@@ -224,7 +231,7 @@ Quiverplot：绘制运动矢量图
 
  
 
-![img](images\clip_image034.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image034.jpg)
 
  
 
@@ -232,29 +239,29 @@ Quiverplot：绘制运动矢量图
 
  
 
-![img](\images\clip_image036.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image036.jpg)
 
 （剪切攻击后，大多数的帧还原出来的水印仍可识别 ）
 
  
 
-![img](images\clip_image038.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image038.jpg)
 
 （压缩攻击后，大多数的帧还原出来的水印仍可识别）
 
-![img](images\clip_image040.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image040.jpg)
 
 （视频压缩后，视觉上变化不大）
 
-![img](images\clip_image041.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image041.jpg)
 
 （运动矢量呈现）
 
-![img](images\clip_image042.png)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image042.jpg)
 
 （压缩后nc系数仍接近于1）
 
-![img](images\clip_image044.jpg)
+![img](https://github.com/SuikaSibyl/VideoDigitalWatermarker/blob/master/images/clip_image044.jpg)
 
 （压缩后psnr系数基本维持再较高水平）
 
